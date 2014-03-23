@@ -17,7 +17,8 @@ SCHEDULER.every '3m', :first_in => 0 do |job|
 
       {
         repo:  repo,
-        label: "<a href='#{url}'>#{issue.fetch('title')}</a>",
+        # TODO: less ghetto XSS protection
+        label: "<a href='#{url}'>#{issue.fetch('title').gsub("<", "")}</a>",
         value: issue.fetch('comments'),
         url:   issue.fetch('html_url'),
         updated_at: Time.parse(issue.fetch('updated_at')).strftime("%Y-%m-%d")
