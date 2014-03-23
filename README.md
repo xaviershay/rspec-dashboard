@@ -1,1 +1,1 @@
-Check out http://shopify.github.com/dashing for more information.
+Dashboard for upcoming RSpec 3 release.
