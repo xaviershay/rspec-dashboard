@@ -1,0 +1,19 @@
+<h1 class="title" data-bind="title"></h1>
+
+<table>
+  <tr>
+    <th>Repo</th>
+    <th class='left'>Issue</th>
+    <th>Comments</th>
+    <th>Updated</th>
+  </tr>
+  <tr data-foreach-item='items'>
+    <td data-bind='item.repo'></td>
+    <td class='left' data-bind='item.label | raw'></td>
+    <td data-bind='item.value'></td>
+    <td data-bind='item.updated_at'></td>
+  </tr>
+</table>
+
+<p class="more-info" data-bind="moreinfo"></p>
+<p class="updated-at" data-bind="updatedAtMessage"></p>
